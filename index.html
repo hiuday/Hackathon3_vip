@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body > * {
+        margin: 50px;
+      }
+      header {
+        background-color: white;
+        padding: 5px 10px;
+        border: 1px solid black;
+        height: 1000px;
+      }
+
+      .list_student {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .list_student > * {
+        padding: 5px;
+      }
+      #student > li input {
+        margin: 10px;
+      }
+
+      button {
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(200, 200, 207);
+        width: 50px;
+        margin: 5px;
+      }
+      table {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="list_student">
+        <h1>thong tin hoc vien</h1>
+        <ul id="student">
+          <li>
+            <label for="text">Họ và tên</label>
+            <input id="inputAdd1" type="text" placeholder="Name" />
+          </li>
+          <li>
+            <label for="text">Email</label>
+            <input id="inputAdd2" type="email" placeholder="Email:" />
+          </li>
+          <li>
+            <label for="text">Số điện thoại</label>
+            <input id="inputAdd3" type="tel" placeholder="SDT" />
+          </li>
+          <li>
+            <label for="text">Quê quán</label>
+            <input id="inputAdd4" type="text" placeholder="Address" />
+          </li>
+          <li>
+            <label for="text">Giới tính</label>
+            <input type="radio" id="inputAdd5" name="1" /><label for="text"
+              >Nam</label
+            >
+            <input type="radio" id="inputAdd5" name="1" /><label for="text"
+              >Nữ</label
+            >
+          </li>
+        </ul>
+        <button type="submit" onclick="handleAdd()">luu lai</button>
+      </div>
+      <br />
+      <br />
+      <h1>Danh sach hoc vien</h1>
+      <label for="find">tim kiem ten hoc vien</label>
+      <input type="text" /><button type="submit">search</button>
+      <form action="">
+        <input
+        type="text"
+        placeholder="search student"
+        oninput="handleSearch(this.value)"
+      />
+        <table id="list_student_2">
+          <tr>
+            <td>#</td>
+            <td>ho ten</td>
+            <td>email</td>
+            <td>dien thoai</td>
+            <td>dia chi</td>
+
+            <td>gender</td>
+            <td>hanh dong</td>
+
+            <td><button>sap xep alpha</button></td>
+          </tr>
+        </table>
+      </form>
+    </header>
+  </body>
+  <script src="script.js"></script>
+</html>
